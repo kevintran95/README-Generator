@@ -58,36 +58,36 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {inquirer
     .prompt(questions)
-       .then(response => {
-           var markdown = `## Description
-           ${response.description}
+        .then(response => {
+var markdown = `## Description
+${response.description}
            
-           ## Table of contents
-           [Description](#description)
-           [Installation](#installation)
-           [Usage](#usage)
-           [License](#license)
-           [Contribution](#contributing)
-           [Test](#test)
+## Table of contents
+[Description](#description)
+[Installation](#installation)
+[Usage](#usage)
+[License](#license)
+[Contribution](#contributing)
+[Test](#test)
            
            
-           ## Installation
-           ${response.installation}
+## Installation
+${response.installation}
            
-           ## Usage
-           ${response.usage}
+## Usage
+${response.usage}
            
-           ## License
-           ${response.license}
+## License
+${response.license}
            
-           ## Contributing
-           ${response.contributions}
+## Contributing
+${response.contributions}
            
-           ## Tests
-           ${response.testinstructions}
+## Tests
+${response.testinstructions}
            
-           ## Questions
-           If you have an questions please contact me at (${response.githubURL})`
+## Questions
+If you have an questions please contact me at ${response.githubURL} or at ${response.contact}`
 
            fs.writeFile("READ.md", markdown, (err) =>
          err ? console.log(err) : console.log('success')

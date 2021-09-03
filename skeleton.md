@@ -26,4 +26,4 @@ ${response.contributions}
 ${response.testinstructions}
 
 ## Questions
-${response.contact}
+If you have an questions please contact me at (${response.githubURL})
