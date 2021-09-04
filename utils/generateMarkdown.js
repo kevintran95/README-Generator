@@ -56,7 +56,7 @@ function renderLicenseSection(license) {
     return apacheLS
   }
   if (license === "MIT") {
-    let MITLS = `Copyright <2021> <${name}>
+    let MITLS = `Copyright <2021> <${githubURL}>
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the 
     Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the 
     Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -71,7 +71,7 @@ function renderLicenseSection(license) {
     return MITLS
   }
   if (license === "ISC") {
-    let ISCLS = `Copyright <YEAR> <OWNER>
+    let ISCLS = `Copyright <YEAR> <${githubURL}>
 
     Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
     
@@ -81,13 +81,50 @@ function renderLicenseSection(license) {
 
     return ISCLS
   }
+  if (license === "Other") {
+    return " "
+  }
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(response) {
+  return `# ${response.title}
 
-`;
+
+## Description
+${response.description}
+           
+## Table of contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributers](#contributers)
+- [Test](#test)
+           
+           
+## Installation
+${response.installation}
+           
+## Usage
+${response.usage}
+           
+## License
+${response.license} 
+
+${renderLicenseSection(response.license, response.githubURL)}
+${response.license} Link: ${renderLicenseLink(response.license)}
+
+## Contributers
+${response.contributers}
+           
+## Tests
+${response.testinstructions}
+           
+## Questions
+If you have an questions please contact me at ${response.githubURL} or at ${response.contact}`;
 }
 
 module.exports = generateMarkdown;
+
+

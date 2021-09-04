@@ -1,6 +1,10 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+const Choice = require('inquirer/lib/objects/choice');
+const { report } = require('process');
+const generateMarkdown = require('./utils/generateMarkdown')
+
 
 
 // TODO: Create an array of questions for user input
@@ -28,7 +32,8 @@ const questions = [
 {
     type: 'input',
     message:'What licenses will you be using',
-    name:'license'
+    name:'license',
+    choices: ['Apache', 'MIT', 'ISC', 'Other']
 },
 {
     type: 'input',
@@ -51,49 +56,20 @@ const questions = [
     name:'contact'
 }
 ];
-
+// TODO: Create a function to write README file
+//function writetoFile (filename, data){}
 
 
 // TODO: Create a function to initialize app
 function init() {inquirer
     .prompt(questions)
         .then(response => {
-var markdown = `## Description
-${response.description}
-           
-## Table of contents
-[Description](#description)
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributers](#contributers)
-[Test](#test)
-           
-           
-## Installation
-${response.installation}
-           
-## Usage
-${response.usage}
-           
-## License
-${response.license}
-           
-## Contributers
-${response.contributers}
-           
-## Tests
-${response.testinstructions}
-           
-## Questions
-If you have an questions please contact me at ${response.githubURL} or at ${response.contact}`
-
-           fs.writeFile("READme.md", markdown, (err) =>
+            
+        fs.writeFile("READme.md", generateMarkdown(response), (err) =>
          err ? console.log(err) : console.log('success')
          );
        }) 
          
-        
 };
 // Function call to initialize app
 init();
