@@ -1,5 +1,5 @@
 `## Description
-${response.description}
+${data.description}
            
 ## Table of contents
 [Description](#description)
@@ -11,19 +11,19 @@ ${response.description}
            
            
 ## Installation
-${response.installation}
+${data.installation}
            
 ## Usage
-${response.usage}
+${data.usage}
            
 ## License
-${response.license}
+${data.license}
            
 ## Contributers
-${response.contributers}
+${data.contributers}
            
 ## Tests
-${response.testinstructions}
+${data.testinstructions}
            
 ## Questions
-If you have an questions please contact me at ${response.githubURL} or at ${response.contact}`
+If you have an questions please contact me at ${data.githubURL} or at ${data.contact}`

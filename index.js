@@ -1,8 +1,6 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const Choice = require('inquirer/lib/objects/choice');
-const { report } = require('process');
 const generateMarkdown = require('./utils/generateMarkdown')
 
 
@@ -12,7 +10,7 @@ const questions = [
     {
     type: "input",
     message: "What is the title of the project?",
-    name: "Title"
+    name: "title"
 }, 
 {
     type: "input",
@@ -63,9 +61,9 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {inquirer
     .prompt(questions)
-        .then(response => {
+        .then(data => {
             
-        fs.writeFile("READme.md", generateMarkdown(response), (err) =>
+        fs.writeFile("READme.md", generateMarkdown(data), (err) =>
          err ? console.log(err) : console.log('success')
          );
        }) 
