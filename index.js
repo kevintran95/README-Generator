@@ -32,8 +32,8 @@ const questions = [
 },
 {
     type: 'input',
-    message: 'Please enter contribution guidelines:',
-    name:'contributions'
+    message: 'Please list the contributers:',
+    name:'contributers'
 },
 {
     type:'input',
@@ -52,7 +52,6 @@ const questions = [
 }
 ];
 
-// TODO: Create a function to write README file
 
 
 // TODO: Create a function to initialize app
@@ -67,7 +66,7 @@ ${response.description}
 [Installation](#installation)
 [Usage](#usage)
 [License](#license)
-[Contribution](#contributing)
+[Contributers](#contributers)
 [Test](#test)
            
            
@@ -80,8 +79,8 @@ ${response.usage}
 ## License
 ${response.license}
            
-## Contributing
-${response.contributions}
+## Contributers
+${response.contributers}
            
 ## Tests
 ${response.testinstructions}
@@ -89,7 +88,7 @@ ${response.testinstructions}
 ## Questions
 If you have an questions please contact me at ${response.githubURL} or at ${response.contact}`
 
-           fs.writeFile("READ.md", markdown, (err) =>
+           fs.writeFile("READme.md", markdown, (err) =>
          err ? console.log(err) : console.log('success')
          );
        }) 
