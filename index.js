@@ -29,9 +29,10 @@ const questions = [
 },
 {
     type: 'input',
+    choices: ['Apache', 'MIT', 'ISC', 'Other'],
     message:'What licenses will you be using',
-    name:'license',
-    choices: ['Apache', 'MIT', 'ISC', 'Other']
+    name:'license'
+    
 },
 {
     type: 'input',
@@ -63,7 +64,7 @@ function init() {inquirer
     .prompt(questions)
         .then(data => {
             
-        fs.writeFile("READme.md", generateMarkdown(data), (err) =>
+        fs.writeFile("READMEDemo.md", generateMarkdown(data), (err) =>
          err ? console.log(err) : console.log('success')
          );
        }) 

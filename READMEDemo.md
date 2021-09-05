@@ -1,8 +1,8 @@
-# ktktktkktktkkt
+# Readme Generator 
 
 
 ## Description
-tktkktkt
+to create a high quality readme file
            
 ## Table of contents
 - [Description](#description)
@@ -14,22 +14,20 @@ tktkktkt
            
            
 ## Installation
-ktktkktk
+example install
            
 ## Usage
-tk
+example usage
            
 ## License
-ktktk 
+example license  
 
-undefined
-ktktk Link: undefined
 
 ## Contributers
-tt
+Kevin Tran 
            
 ## Tests
-
+node index.js
            
 ## Questions
-If you have an questions please contact me at tktktkktktkt or at tktktkt
+If you have an questions please contact me at github.com/kevintran95 or at kevin_tran95@yahoo.com
