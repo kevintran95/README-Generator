@@ -4,9 +4,10 @@
 The purpose of this project is to quickly allow users to create a high quality README file that contains all the necessary talking points as well as help users save time.
 
 ## Credit 
-Kevin Tran 
-w3schools.com
-stackoverflow.com
+- Kevin Tran 
+- w3schools.com
+- stackoverflow.com
 
 #Links
-https://github.com/kevintran95/README-Generator
+- https://github.com/kevintran95/README-Generator
+- https://watch.screencastify.com/v/V5eB4oV6uhb37Z45dv16
